@@ -32,7 +32,7 @@ describe('Register page', () => {
 
 
         it('register successfully', () => {
-            cy.visit("https://gallery-app.vivifyideas.com/register")
+            cy.visit("/register")
             var password = faker.internet.password();
             var firstName = faker.name.firstName();
             var lastName = faker.name.lastName();
@@ -86,7 +86,7 @@ describe('Register page', () => {
             var password = faker.internet.password();
             registerpage.firstNameInputField.type(faker.name.firstName());
             registerpage.lastNameInputField.clear
-            registerpage.emailInputField.type("tatijanapeckovski@gmail.com");
+            registerpage.emailInputField.type("milantintor32@gmail.com");
             registerpage.passwordInputField.type(password);
             registerpage.conf_passwordInputField.type(password);
             registerpage.termsCheckbox.click()
@@ -107,9 +107,9 @@ describe('Register page', () => {
 
         it('try to register with empty password input field', () => {
             cy.visit("https://gallery-app.vivifyideas.com/register")
-            registerpage.firstNameInputField.type("Tatijana");
+            registerpage.firstNameInputField.type("Milan");
             registerpage.lastNameInputField.type(faker.name.lastName);
-            registerpage.emailInputField.type("tatijanapeckovski@gmail.com");
+            registerpage.emailInputField.type("milantintor32@gmail.com");
             registerpage.passwordInputField.clear
             registerpage.conf_passwordInputField.type(faker.internet.password);
             registerpage.termsCheckbox.click()
@@ -118,9 +118,9 @@ describe('Register page', () => {
 
         it('try to register with empty password-confimation input field', () => {
             cy.visit("https://gallery-app.vivifyideas.com/register")
-            registerpage.firstNameInputField.type("Tatijana");
+            registerpage.firstNameInputField.type("Milan");
             registerpage.lastNameInputField.type(faker.name.lastName);
-            registerpage.emailInputField.type("tatijanapeckovski@gmail.com");
+            registerpage.emailInputField.type("milantintor32@gmail.com");
             registerpage.passwordInputField.type(faker.internet.password)
             registerpage.conf_passwordInputField.clear;
             registerpage.termsCheckbox.click()
@@ -131,9 +131,9 @@ describe('Register page', () => {
         it('try to register while terms and conditions are not accepted', () => {
             cy.visit("https://gallery-app.vivifyideas.com/register")
             var password = faker.internet.password();
-            registerpage.firstNameInputField.type("Tatijana");
+            registerpage.firstNameInputField.type("Milan");
             registerpage.lastNameInputField.type(faker.name.lastName);
-            registerpage.emailInputField.type("tatijanapeckovski@gmail.com");
+            registerpage.emailInputField.type("milantintor32@gmail.com");
             registerpage.passwordInputField.type(password);
             registerpage.conf_passwordInputField.type(password);
             registerpage.termsCheckbox.clear
@@ -145,7 +145,7 @@ describe('Register page', () => {
 
             registerpage.firstNameInputField.type(faker.internet.userName);
             registerpage.lastNameInputField.type(faker.name.lastName);
-            registerpage.emailInputField.type("tatijanapeckovski@gmail.com");
+            registerpage.emailInputField.type("milantintor32@gmail.com");
             registerpage.passwordInputField.type(faker.internet.password);
             registerpage.conf_passwordInputField.type(faker.internet.password);
             registerpage.termsCheckbox.click()

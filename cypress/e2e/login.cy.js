@@ -45,6 +45,6 @@ import { loginPage } from '../page_object/loginPage'
 
 it('login successfully', () => {
         cy.visit("https://gallery-app.vivifyideas.com/login")
-        loginPage.AuthLogin('tatianapintir@gmail.com', '23jul2022')
+        loginPage.AuthLogin('milantintor32@gmail.com', 'milanlenovotintor23')
 });
 
